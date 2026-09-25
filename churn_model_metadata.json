@@ -1,0 +1,33 @@
+{
+  "model_name": "Random Forest",
+  "decision_threshold": 0.95,
+  "test_roc_auc": 0.8459389289312563,
+  "test_pr_auc": 0.6546883697830483,
+  "trained_on_rows": 5634,
+  "feature_columns": [
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "tenure",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "MonthlyCharges",
+    "TotalCharges",
+    "TenureBucket",
+    "NumAddonServices",
+    "AvgMonthlySpend",
+    "IsMonthToMonth",
+    "IsElectronicCheck"
+  ]
+}

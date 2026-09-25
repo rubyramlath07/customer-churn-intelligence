@@ -1,0 +1,745 @@
+/* ============================================================
+   CUSTOMER CHURN INTELLIGENCE - NAVY / LIGHT BLUE THEME
+   ============================================================ */
+
+.stApp {
+    background: #f3f7fb;
+    color: #1e293b;
+}
+
+.main .block-container {
+    max-width: 1450px;
+    padding-top: 1.2rem;
+    padding-bottom: 2rem;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #0b3a66 0%, #082f52 100%);
+}
+section[data-testid="stSidebar"] * {
+    color: #ffffff !important;
+}
+
+/* Header */
+.dashboard-header {
+    background: linear-gradient(135deg, #0b3a66 0%, #14558d 100%);
+    border: 1px solid #8fb7d9;
+    border-radius: 18px;
+    padding: 18px 25px;
+    text-align: center;
+    margin: 0 0 18px 0;
+    box-shadow: 0 5px 16px rgba(11,58,102,.18);
+}
+.dashboard-header-title {
+    color: #fff;
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: .7px;
+}
+.dashboard-header-subtitle {
+    color: #dcecf9;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* ============================================================
+   KPI CARDS
+   3 cards on top + 2 centered cards below
+   ============================================================ */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.kpi-card {
+    grid-column: span 2;
+    background: #ffffff;
+    border: 1px solid #c8d9e8;
+    border-radius: 14px;
+    min-height: 112px;
+    padding: 15px 17px;
+    box-shadow: 0 3px 10px rgba(15,58,95,.08);
+    box-sizing: border-box;
+}
+
+.kpi-card:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.kpi-card:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+.kpi-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #e8f1fa;
+    color: #0b3a66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+.kpi-title {
+    color: #64748b;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+.kpi-value {
+    color: #0b3a66;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-top: 3px;
+}
+.kpi-description {
+    color: #64748b;
+    font-size: 10px;
+    margin-top: 4px;
+}
+.dashboard-spacer { height: 3px; }
+
+/* Filters */
+.filter-heading {
+    color: #0b3a66;
+    font-size: 16px;
+    font-weight: 800;
+    background: #ffffff;
+    border: 1px solid #d5e1ec;
+    border-radius: 12px 12px 0 0;
+    padding: 11px 15px 5px;
+    margin-top: 4px;
+}
+
+/* Chart headings */
+.chart-title {
+    color: #0b3a66;
+    background: #ffffff;
+    border: 1px solid #d5e1ec;
+    border-bottom: none;
+    border-radius: 13px 13px 0 0;
+    padding: 13px 15px 2px;
+    font-size: 14px;
+    font-weight: 800;
+}
+.chart-subtitle {
+    color: #64748b;
+    background: #ffffff;
+    border-left: 1px solid #d5e1ec;
+    border-right: 1px solid #d5e1ec;
+    padding: 0 15px 7px;
+    font-size: 10px;
+}
+
+/* Make Streamlit chart blocks look like white cards */
+div[data-testid="stVegaLiteChart"],
+div[data-testid="stArrowVegaLiteChart"] {
+    background: #ffffff;
+    border: 1px solid #d5e1ec;
+    border-top: none;
+    border-radius: 0 0 13px 13px;
+    padding: 0 8px 8px;
+    box-shadow: 0 3px 10px rgba(15,58,95,.06);
+}
+
+.section-gap { height: 18px; }
+
+.section-header {
+    color: #0b3a66;
+    background: #ffffff;
+    border: 1px solid #d5e1ec;
+    border-radius: 13px 13px 0 0;
+    padding: 13px 15px 4px;
+    margin-top: 18px;
+    font-size: 16px;
+    font-weight: 800;
+}
+.section-description {
+    color: #64748b;
+    background: #ffffff;
+    border-left: 1px solid #d5e1ec;
+    border-right: 1px solid #d5e1ec;
+    padding: 0 15px 10px;
+    font-size: 10px;
+}
+
+/* Dataframe */
+div[data-testid="stDataFrame"] {
+    border: 1px solid #c8d9e8;
+    border-radius: 0 0 13px 13px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(15,58,95,.06);
+}
+
+/* Inputs */
+div[data-baseweb="select"] > div,
+div[data-baseweb="input"] > div {
+    border-radius: 8px !important;
+    border-color: #c8d9e8 !important;
+    background: #ffffff !important;
+}
+
+/* Buttons */
+.stButton > button {
+    background: #0b3a66 !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 9px !important;
+    font-weight: 700 !important;
+}
+.stButton > button:hover {
+    background: #14558d !important;
+}
+.stDownloadButton > button {
+    background: #e8f1fa !important;
+    color: #0b3a66 !important;
+    border: 1px solid #b7cde0 !important;
+    border-radius: 9px !important;
+    font-weight: 700 !important;
+}
+
+/* AI card */
+.ai-card {
+    background: linear-gradient(135deg, #e8f1fa 0%, #f9fcff 100%);
+    border: 1px solid #a9c8e3;
+    border-left: 5px solid #0b3a66;
+    border-radius: 14px;
+    padding: 17px 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(11,58,102,.08);
+}
+.ai-title {
+    color: #0b3a66;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+.ai-text {
+    color: #334155;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+/* Prediction / existing components */
+[data-testid="stMetric"] {
+    background: #ffffff;
+    border: 1px solid #c8d9e8;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 3px 10px rgba(15,58,95,.06);
+}
+[data-testid="stMetricValue"] {
+    color: #0b3a66 !important;
+    font-weight: 800 !important;
+}
+[data-testid="stMetricLabel"] {
+    color: #64748b !important;
+}
+
+hr { border-color: #d5e1ec !important; }
+
+@media (max-width: 900px) {
+    .kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .kpi-card,
+    .kpi-card:nth-child(4),
+    .kpi-card:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .dashboard-header-title {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 600px) {
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kpi-card,
+    .kpi-card:nth-child(4),
+    .kpi-card:nth-child(5) {
+        grid-column: auto;
+    }
+}
+
+
+
+
+/* ============================================================
+   PHASE 4 - POLISHED MONITORING CARDS
+   ============================================================ */
+
+.phase4-card {
+    background: #ffffff;
+    border: 1px solid #d8e4ef;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(20, 55, 90, 0.05);
+    padding: 20px;
+    min-height: 325px;
+}
+
+.phase4-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #e8eef4;
+}
+
+.phase4-card-title {
+    color: #0b3a66;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.phase4-card-subtitle {
+    color: #718096;
+    font-size: 12px;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+.phase4-total {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.phase4-total strong {
+    display: block;
+    color: #0b3a66;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.phase4-total span {
+    display: block;
+    color: #8a98a8;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.risk-list {
+    padding-top: 7px;
+}
+
+.risk-row {
+    padding: 10px 0 7px;
+}
+
+.risk-row-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.risk-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #253b53;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.risk-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.risk-count {
+    color: #0b3a66;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.risk-count span {
+    color: #8a98a8;
+    font-size: 11px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.risk-track {
+    height: 7px;
+    width: 100%;
+    background: #edf2f7;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.risk-fill {
+    height: 100%;
+    min-width: 2px;
+    border-radius: 99px;
+}
+
+.risk-low {
+    background: #4b8bb8;
+}
+
+.risk-medium {
+    background: #8aa9c4;
+}
+
+.risk-high {
+    background: #52789a;
+}
+
+.risk-critical {
+    background: #315c80;
+}
+
+.risk-threshold-note {
+    margin-top: 9px;
+    padding-top: 12px;
+    border-top: 1px solid #e8eef4;
+    color: #8997a6;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.model-information-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.model-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #edf5fc;
+    color: #0b3a66;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.model-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 5px;
+}
+
+.model-detail {
+    padding: 15px 8px 13px 0;
+    border-bottom: 1px solid #e8eef4;
+}
+
+.model-detail:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+.model-detail-label {
+    color: #8190a0;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    margin-bottom: 5px;
+}
+
+.model-detail-value {
+    color: #0b3a66;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.model-explanation {
+    margin-top: 15px;
+    padding: 12px 13px;
+    background: #f7fafc;
+    border: 1px solid #e4ecf3;
+    border-radius: 10px;
+}
+
+.model-explanation-title {
+    color: #0b3a66;
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.model-explanation-text {
+    color: #718096;
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+.model-explanation-text strong {
+    color: #0b3a66;
+}
+
+@media (max-width: 900px) {
+    .phase4-card {
+        min-height: auto;
+    }
+
+    .model-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .model-detail:nth-child(3) {
+        grid-column: auto;
+    }
+}
+
+
+/* ============================================================
+   EXECUTIVE SUMMARY
+   ============================================================ */
+
+.executive-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin: 8px 0 18px;
+}
+
+.executive-card {
+    background: #ffffff;
+    border: 1px solid #d8e4ef;
+    border-radius: 14px;
+    padding: 16px 17px;
+    min-height: 112px;
+    box-shadow: 0 3px 12px rgba(20, 55, 90, 0.035);
+    position: relative;
+    overflow: hidden;
+}
+
+.executive-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #2f6f9f;
+}
+
+.executive-label {
+    color: #728397;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.075em;
+}
+
+.executive-value {
+    color: #0b3a66;
+    font-size: 25px;
+    font-weight: 850;
+    line-height: 1.15;
+    margin-top: 8px;
+    letter-spacing: -0.02em;
+}
+
+.executive-note {
+    color: #8997a6;
+    font-size: 10px;
+    line-height: 1.35;
+    margin-top: 5px;
+}
+
+@media (max-width: 1050px) {
+    .executive-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .executive-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ============================================================
+   CHURN DRIVER ANALYSIS
+   ============================================================ */
+
+.driver-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 8px 0 14px;
+}
+
+.driver-card {
+    background: #ffffff;
+    border: 1px solid #d8e4ef;
+    border-radius: 14px;
+    padding: 17px 18px;
+    box-shadow: 0 3px 12px rgba(20, 55, 90, 0.035);
+}
+
+.driver-card-wide {
+    margin-top: 14px;
+}
+
+.driver-card-title {
+    color: #0b3a66;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.driver-card-subtitle {
+    color: #7a8998;
+    font-size: 10px;
+    line-height: 1.4;
+    margin-top: 4px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #e8eef4;
+}
+
+.driver-list {
+    padding-top: 5px;
+}
+
+.driver-row {
+    padding: 8px 0 6px;
+}
+
+.driver-row-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.driver-label {
+    color: #334155;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.driver-value {
+    color: #0b3a66;
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.driver-value span {
+    color: #94a0ad;
+    font-size: 9px;
+    font-weight: 600;
+    margin-left: 3px;
+}
+
+.driver-track {
+    width: 100%;
+    height: 6px;
+    background: #edf2f7;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.driver-fill {
+    height: 100%;
+    min-width: 2px;
+    background: #4b8bb8;
+    border-radius: 99px;
+}
+
+.charge-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 28px;
+}
+
+.driver-footnote {
+    background: #f7fafc;
+    border: 1px solid #dbe6ef;
+    border-left: 4px solid #4b8bb8;
+    border-radius: 10px;
+    padding: 10px 13px;
+    margin: 14px 0 20px;
+    color: #718096;
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+.driver-footnote strong {
+    color: #0b3a66;
+}
+
+@media (max-width: 1000px) {
+    .driver-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .charge-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   PHASE 5.3 - RETENTION ACTION CENTER
+   ============================================================ */
+
+.c360-action-card,
+.action-center-card {
+    background: #ffffff;
+    border: 1px solid #d8e4ef;
+    border-left: 4px solid #0b3a66;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 12px 0 18px;
+    box-shadow: 0 3px 12px rgba(20,55,90,.035);
+}
+
+.c360-action-title {
+    color: #0b3a66;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.c360-action-text {
+    color: #475569;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   PHASE 5.4 - CUSTOMER 360
+   ============================================================ */
+
+.c360-summary {
+    background: #ffffff;
+    border: 1px solid #d8e4ef;
+    border-radius: 14px;
+    padding: 15px;
+    margin-bottom: 14px;
+}
+
+/* ============================================================
+   PHASE 5.5 - REPORTING
+   ============================================================ */
+
+.reporting-note {
+    background: #f7fafc;
+    border: 1px solid #dbe6ef;
+    border-radius: 10px;
+    padding: 11px 14px;
+    color: #718096;
+    font-size: 10px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
